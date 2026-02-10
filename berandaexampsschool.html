@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Beranda Examps School</title>
+  <link rel="stylesheet" href="exampsschool.css" />
+</head>
+
+<body class="beranda-body">
+
+  <!-- HEADER ATAS -->
+  <header class="header">
+    <div class="left-profile">
+      <img src="iconprofil.png" class="profile-img" alt="Foto Profil">
+      <div class="student-text">
+        <h2 id="namaSiswa">NAMA SISWA</h2>
+        <p>XI RPL 2</p>
+      </div>
+    </div>
+
+    <img src="hisiswaexamps-removebg-preview.png" class="student-illustration" alt="Ilustrasi Siswa">
+
+    <!-- TOMBOL LOGOUT -->
+    <button class="btn-logout" onclick="logout()">LOGOUT</button>
+  </header>
+
+  <div class="navbar-line"></div>
+
+  <!-- MENU -->
+  <section class="menu">
+    <button class="menu-btn" onclick="window.location.href='jadwalexamps.html'">JADWAL UJIAN</button>
+    <button class="menu-btn" onclick="window.location.href='informasiexamps.html'">INFORMASI</button>
+  </section>
+
+  <script>
+    const nama = localStorage.getItem("namaSiswa");
+    if (nama) {
+      document.getElementById("namaSiswa").textContent = nama.toUpperCase();
+    }
+
+    function logout() {
+      localStorage.removeItem("namaSiswa"); // hapus data login
+      window.location.href = "index.html"; 
+    }
+  </script>
+
+</body>
+</html>
