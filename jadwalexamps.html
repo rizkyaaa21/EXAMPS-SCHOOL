@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Jadwal Ujian</title>
+  <link rel="stylesheet" href="exampsschool.css">
+</head>
+
+<body class="beranda-body">
+
+  <!-- HEADER ATAS -->
+  <header class="header">
+    <div class="left-profile">
+      <img src="iconprofil.png" class="profile-img" alt="Foto Profil">
+      <div class="student-text">
+        <h2 id="namaSiswa">NAMA SISWA</h2>
+        <p>XI RPL 2</p>
+      </div>
+    </div>
+
+    <img src="hisiswaexamps-removebg-preview.png" class="student-illustration" alt="Ilustrasi Siswa">
+  </header>
+
+  <div class="navbar-line"></div>
+
+  <!-- JUDUL -->
+  <h1 class="jadwal-title">JADWAL UJIAN</h1>
+
+  <!-- BOX JADWAL -->
+  <div class="jadwal-box">
+    <div class="mapel">KOMPETENSI KEAHLIAN</div>
+    <div class="waktu">08.00 - 09.00</div>
+  </div>
+
+  <button class="mulai-btn" onclick="window.location.href='soalexampsschool.html'">MULAI</button>
+
+
+
+  <!-- SCRIPT NAMA -->
+  <script>
+    const nama = localStorage.getItem("namaSiswa");
+    if (nama) {
+      document.getElementById("namaSiswa").textContent = nama.toUpperCase();
+    }
+  </script>
+
+</body>
+</html>

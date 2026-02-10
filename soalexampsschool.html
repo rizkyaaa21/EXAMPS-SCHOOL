@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Jadwal Ujian</title>
+  <link rel="stylesheet" href="exampsschool.css">
+</head>
+
+<body class="beranda-body">
+
+  <!-- HEADER ATAS -->
+  <header class="header">
+    <div class="left-profile">
+      <img src="iconprofil.png" class="profile-img" alt="Foto Profil">
+      <div class="student-text">
+        <h2 id="namaSiswa">NAMA SISWA</h2>
+        <p>XI RPL 2</p>
+      </div>
+    </div>
+
+    <img src="hisiswaexamps-removebg-preview.png" class="student-illustration" alt="Ilustrasi Siswa">
+  </header>
+
+  <div class="navbar-line"></div>
+
+  <!-- TIMER -->
+  <div class="timer">90:00</div>
+
+  <!-- KONTEN SOAL -->
+  <div class="container-soal-besar">
+    <div class="kotak-pertanyaan">
+      Apa kepanjangan dari singkatan CSS ?
+    </div>
+
+    <div class="pilihan-jawaban">
+  <label><input type="radio" name="q1" value="A"> A. Computer Style System</label><br>
+  <label><input type="radio" name="q1" value="B"> B. Creative Style Sheet</label><br>
+  <label><input type="radio" name="q1" value="C"> C. Cascading Style Sheets</label><br>
+  <label><input type="radio" name="q1" value="D"> D. Colorful Style Syntax</label><br>
+  <label><input type="radio" name="q1" value="E"> E. Coding Style Structure</label>
+</div>
+
+  </div>
+
+  <!-- TOMBOL SUBMIT (BELUM AKTIF) -->
+  <button class="btn-submit" onclick="kirimJawaban()">SUBMIT</button>
+
+  <script>
+  function kirimJawaban() {
+    window.location.href = "skorpgexamp.html";
+  }
+</script>
+
+<script>
+function kirimJawaban() {
+  const jawaban = document.querySelector('input[name="q1"]:checked');
+
+  if (!jawaban) {
+    alert("Pilih jawaban dulu ya!");
+    return;
+  }
+
+  let skor = 0;
+
+  // Jawaban benar adalah C
+  if (jawaban.value === "C") {
+    skor = 100;
+  }
+
+  // Simpan skor ke localStorage
+  localStorage.setItem("skorUjian", skor);
+
+  // Pindah ke halaman skor
+  window.location.href = "skorpgexamp.html";
+}
+</script>
+
+<script>
+    const nama = localStorage.getItem("namaSiswa");
+    if (nama) {
+      document.getElementById("namaSiswa").textContent = nama.toUpperCase();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skor Ujian</title>
+  <link rel="stylesheet" href="exampsschool.css">
+</head>
+<body class="bg-ungu">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="left-profile">
+      <img src="iconprofil.png" class="profile-img" alt="Foto Profil">
+      <div class="student-text">
+        <h2 id="namaSiswa">NAMA SISWA</h2>
+        <p>XI RPL 2</p>
+      </div>
+    </div>
+
+    <img src="hisiswaexamps-removebg-preview.png" class="student-illustration" alt="Ilustrasi Siswa">
+  </header>
+
+  <div class="navbar-line"></div>
+
+  <!-- KONTEN SKOR -->
+  <div class="container-skor">
+    <h1>ANANDA RIZKYA</h1>
+
+    <div class="kotak-skor">
+      <h2>SKOR : 90</h2>
+      <p>
+        KETERANGAN : Kamu berhasil melewati ujian ini dengan baik.
+        Kerja keras dan belajarmu kebukti hasilnya <b>SELAMAT!!</b>
+      </p>
+    </div>
+  </div>
+
+  <!-- TOMBOL BACK -->
+  <button class="btn-back" onclick="kembaliBeranda()">BACK</button>
+
+<script>
+  function kembaliBeranda() {
+    window.location.href = "berandaexampsschool.html";
+  }
+</script>
+
+<script>
+    const nama = localStorage.getItem("namaSiswa");
+    if (nama) {
+      document.getElementById("namaSiswa").textContent = nama.toUpperCase();
+    }
+  </script>
+
+
+</body>
+</html>
