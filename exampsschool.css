@@ -518,3 +518,50 @@ body.bg-ungu {
   background: #cc0000;
   transform: scale(1.05);
 }
+
+
+.html {
+  scroll-behavior: smooth;
+}
+
+.about-section {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #6a5acd, #483d8b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  color: white;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 350px;
+  width: 100%;
+}
