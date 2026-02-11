@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Jadwal Ujian</title>
-  <link rel="stylesheet" href="exampsschool.css">
+  <title>Beranda Examps School</title>
+  <link rel="stylesheet" href="exampsschool.css" />
 </head>
 
 <body class="beranda-body">
@@ -20,24 +20,28 @@
     </div>
 
     <img src="hisiswaexamps-removebg-preview.png" class="student-illustration" alt="Ilustrasi Siswa">
+
+    <!-- TOMBOL LOGOUT -->
+    <button class="btn-logout" onclick="logout()">LOGOUT</button>
   </header>
 
   <div class="navbar-line"></div>
 
-  <!-- JUDUL -->
-  <h1 class="jadwal-title">JADWAL UJIAN</h1>
+  <!-- MENU -->
+  <section class="menu">
+    <button class="menu-btn" onclick="window.location.href='jadwalexamps.html'">JADWAL UJIAN</button>
+    <button class="menu-btn" onclick="window.location.href='informasiexamps.html'">INFORMASI</button>
+  </section>
 
-  <!-- BOX JADWAL -->
-  <div class="jadwal-box">
-    <div class="mapel">KOMPETENSI KEAHLIAN</div>
-    <div class="waktu">08.00 - 09.00</div>
-  </div>
-
-  <!-- SCRIPT NAMA -->
   <script>
     const nama = localStorage.getItem("namaSiswa");
     if (nama) {
       document.getElementById("namaSiswa").textContent = nama.toUpperCase();
+    }
+
+    function logout() {
+      localStorage.removeItem("namaSiswa"); // hapus data login
+      window.location.href = "index.html"; 
     }
   </script>
 
