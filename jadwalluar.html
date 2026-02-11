@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Beranda Examps School</title>
-  <link rel="stylesheet" href="exampsschool.css" />
+  <title>Jadwal Ujian</title>
+  <link rel="stylesheet" href="exampsschool.css">
 </head>
 
 <body class="beranda-body">
@@ -20,17 +20,20 @@
     </div>
 
     <img src="hisiswaexamps-removebg-preview.png" class="student-illustration" alt="Ilustrasi Siswa">
-
   </header>
 
   <div class="navbar-line"></div>
 
-  <!-- MENU -->
-  <section class="menu">
-    <button class="menu-btn" onclick="window.location.href='jadwalluar.html'">JADWAL UJIAN</button>
-    <button class="menu-btn" onclick="window.location.href='informasiexamps.html'">INFORMASI</button>
-  </section>
+  <!-- JUDUL -->
+  <h1 class="jadwal-title">JADWAL UJIAN</h1>
 
+  <!-- BOX JADWAL -->
+  <div class="jadwal-box">
+    <div class="mapel">KOMPETENSI KEAHLIAN</div>
+    <div class="waktu">08.00 - 09.00</div>
+  </div>
+
+  <!-- SCRIPT NAMA -->
   <script>
     const nama = localStorage.getItem("namaSiswa");
     if (nama) {
